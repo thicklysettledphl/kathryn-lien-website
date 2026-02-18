@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 
 export const metadata = {
   title: "CV — Kathryn Lien",
-  description: "Curriculum vitae for sculptor Kathryn Lien.",
+  description: "Curriculum vitae for Kathryn Lien.",
 };
 
 export default function CVPage() {
@@ -12,9 +12,14 @@ export default function CVPage() {
       <div className="container">
         <header className={styles.header}>
           <h1 className="type-section-header">Curriculum Vitae</h1>
-          <p className={styles.subheading}>
-            {cv.name} — {cv.location}
-          </p>
+          <div className={styles.headerMeta}>
+            <p className={styles.subheading}>
+              {cv.name} — {cv.location}
+            </p>
+            <a href={`mailto:${cv.email}`} className={styles.email}>
+              {cv.email}
+            </a>
+          </div>
         </header>
 
         <hr className="rule" />

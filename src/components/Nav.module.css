@@ -5,8 +5,8 @@
   right: 0;
   z-index: 100;
   height: var(--nav-height);
-  background-color: var(--color-white);
-  border-bottom: 1px solid var(--color-black);
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .inner {
@@ -54,7 +54,7 @@
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-black);
+  background-color: var(--color-fg);
   transition: width 0.2s ease;
 }
 

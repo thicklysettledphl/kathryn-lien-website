@@ -19,11 +19,6 @@ export default function Nav() {
               CV
             </Link>
           </li>
-          <li>
-            <Link href="/contact" className={styles.link}>
-              Contact
-            </Link>
-          </li>
         </ul>
       </div>
     </nav>

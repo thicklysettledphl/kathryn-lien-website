@@ -33,7 +33,7 @@ export default function RootLayout({
         <main>{children}</main>
         <footer
           style={{
-            borderTop: "1px solid var(--color-black)",
+            borderTop: "1px solid var(--color-border)",
             padding: "1.5rem var(--page-padding)",
             display: "flex",
             justifyContent: "space-between",

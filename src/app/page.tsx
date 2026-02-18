@@ -16,10 +16,6 @@ export default function Home() {
               <span className="type-label">Philadelphia</span>
             </div>
           </div>
-          <p className={styles.statement}>
-            Working in bronze, steel, and cast materials — objects that hold weight,
-            history, and the trace of the hand.
-          </p>
         </div>
       </header>
 
