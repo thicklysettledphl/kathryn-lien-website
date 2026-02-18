@@ -38,6 +38,8 @@ export default function RootLayout({
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            flexWrap: "wrap",
+            gap: "0.5rem",
             fontFamily: "var(--font-body)",
             fontSize: "0.75rem",
             letterSpacing: "0.05em",
