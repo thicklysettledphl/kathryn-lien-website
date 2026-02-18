@@ -1,0 +1,78 @@
+.page {
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: 6rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.subheading {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gray-mid);
+  margin-top: 0.75rem;
+}
+
+/* ─── CV Body ────────────────────────────────────────────── */
+.body {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+@media (max-width: 768px) {
+  .section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+}
+
+.labelCol {
+  padding-top: 0.25rem;
+}
+
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.entry {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.year {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  min-width: 2.5rem;
+  padding-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+.entryText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
