@@ -5,8 +5,7 @@ import Link from "next/link";
 import styles from "./Nav.module.css";
 
 const links = [
-  { label: "Installation", href: "/installation" },
-  { label: "Sculpture", href: "/sculpture" },
+  { label: "Work", href: "/work" },
   { label: "CV", href: "/cv" },
   { label: "Design", href: "https://thicklysettled.info", external: true },
 ];
