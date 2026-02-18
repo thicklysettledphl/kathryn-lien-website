@@ -78,7 +78,6 @@ h4 {
   font-weight: 700;
   line-height: 0.95;
   letter-spacing: -0.03em;
-  text-transform: uppercase;
 }
 
 .type-section-header {
@@ -86,15 +85,13 @@ h4 {
   font-size: clamp(1.75rem, 4vw, 3.5rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  text-transform: uppercase;
 }
 
 .type-label {
   font-family: var(--font-body);
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .type-meta {

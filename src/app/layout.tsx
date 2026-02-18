@@ -40,8 +40,7 @@ export default function RootLayout({
             alignItems: "center",
             fontFamily: "var(--font-body)",
             fontSize: "0.75rem",
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
+            letterSpacing: "0.05em",
           }}
         >
           <span>© {new Date().getFullYear()} Kathryn Lien</span>

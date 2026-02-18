@@ -18,8 +18,7 @@
 .subheading {
   font-family: var(--font-body);
   font-size: 0.875rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--color-gray-mid);
 }
 
