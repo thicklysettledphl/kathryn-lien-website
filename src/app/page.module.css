@@ -1,48 +1,21 @@
 .page {
-  /* full-page layout wrapper */
-}
-
-/* ─── Hero ───────────────────────────────────────────────── */
-.hero {
-  padding-top: clamp(3rem, 8vw, 6rem);
-  padding-bottom: clamp(2rem, 5vw, 4rem);
-}
-
-.heroInner {
   display: flex;
-  align-items: baseline;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+  align-items: center;
+  min-height: calc(100dvh - var(--nav-height) - 64px);
 }
 
-.heroName {
-  color: var(--color-black);
+.name {
+  margin-bottom: 1.25rem;
 }
 
-.heroMeta {
+.meta {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding-bottom: 0.25rem;
 }
 
 .dot {
   color: var(--color-accent);
   font-size: 1.25rem;
   line-height: 1;
-}
-
-.statement {
-  font-family: var(--font-body);
-  font-size: clamp(1rem, 1.5vw, 1.125rem);
-  color: var(--color-gray-mid);
-  max-width: 52ch;
-  line-height: 1.6;
-}
-
-/* ─── Grid Section ───────────────────────────────────────── */
-.gridSection {
-  padding-top: 3rem;
-  padding-bottom: 5rem;
 }

@@ -1,11 +1,13 @@
 import Image from "next/image";
-import works from "@/data/works";
+import works, { WorkCategory } from "@/data/works";
 import styles from "./WorkGrid.module.css";
 
-export default function WorkGrid() {
+export default function WorkGrid({ category }: { category: WorkCategory }) {
+  const filtered = works.filter((w) => w.category === category);
+
   return (
     <section className={styles.grid}>
-      {works.map((work) => (
+      {filtered.map((work) => (
         <article key={work.id} className={styles.cell}>
           <div className={styles.imageWrap}>
             <Image

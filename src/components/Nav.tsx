@@ -10,14 +10,29 @@ export default function Nav() {
         </Link>
         <ul className={styles.links}>
           <li>
-            <Link href="/" className={styles.link}>
-              Work
+            <Link href="/installation" className={styles.link}>
+              Installation
+            </Link>
+          </li>
+          <li>
+            <Link href="/sculpture" className={styles.link}>
+              Sculpture
             </Link>
           </li>
           <li>
             <Link href="/cv" className={styles.link}>
               CV
             </Link>
+          </li>
+          <li>
+            <a
+              href="https://thicklysettled.info"
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Design
+            </a>
           </li>
         </ul>
       </div>
