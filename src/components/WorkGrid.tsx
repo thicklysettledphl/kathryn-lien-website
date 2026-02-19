@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import works from "@/data/works";
 import styles from "./WorkGrid.module.css";
@@ -17,9 +17,26 @@ function shuffle<T>(arr: T[]): T[] {
 export default function WorkGrid() {
   const [items, setItems] = useState(works);
   const [lightbox, setLightbox] = useState<string | null>(null);
+  const sentinelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setItems(shuffle(works));
+  }, []);
+
+  // Infinite scroll: append a new shuffled batch when sentinel is visible
+  useEffect(() => {
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setItems((prev) => [...prev, ...shuffle(works)]);
+        }
+      },
+      { rootMargin: "400px" }
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
   }, []);
 
   const close = useCallback(() => setLightbox(null), []);
@@ -39,11 +56,11 @@ export default function WorkGrid() {
   return (
     <>
       <section className={styles.grid}>
-        {items.map((work) => {
+        {items.map((work, index) => {
           const hasCaption = work.title || work.year || work.medium || work.dimensions;
           return (
             <article
-              key={work.id}
+              key={`${work.id}-${index}`}
               className={styles.cell}
               onClick={() => setLightbox(work.image)}
             >
@@ -74,6 +91,8 @@ export default function WorkGrid() {
           );
         })}
       </section>
+
+      <div ref={sentinelRef} style={{ height: 1 }} />
 
       {lightbox && (
         <div className={styles.lightbox} onClick={close}>
